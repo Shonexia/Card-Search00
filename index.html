@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Commander Search</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    .flex {
+  display: flex;
+  flex-flow:  wrap;
+
+}
+
+.size {
+  
+
+  position: relative;
+}
+
+
+
+
+
+
+.overlay0 {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 361px;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+.container0:hover .overlay0 {
+  opacity: 1;
+}
+
+
+.overlay1 {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 361px;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+
+.container1:hover .overlay1 {
+  opacity: 1;
+}
+
+.overlay2 {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 361px;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+
+.container2:hover .overlay2 {
+  opacity: 1;
+}
+
+
+  </style>
+
+</head>
+<body>
+
+<div class="container">
+  <h2>Legal FFA Commander Table</h2>
+  <p>Type something in the input field to search the table for Commander names:</p>  
+  <input class="form-control" id="myInput" type="text" placeholder="Search..">
+  <br>
+  <div class="table table-bordered table-striped">
+    <div id="myDiv" class="flex">
+        <div class="size container0"><img src="aryel knight of windgrace.jpg" alt="aryel knight of windgrace">
+        <div class="overlay0"> <a href="https://starcitygames.com/search/?card_name=Aryel%25c%25%20Knight%20of%20Windgrace" target="_blank">Buy on SCG</a></div></div>
+        <div class="size container1"><img src="atraxa praetors voice.jpg" alt="atraxa praetors voice">
+          <div class="overlay1"> <a href="https://starcitygames.com/search/?card_name=Atraxa%25c%25%20Praetors%27%20Voice" target="_blank">Buy on SCG</a></div></div>
+        <div class="size container2"><img src="aurelia exemplar of justice.jpg" alt="aurelia exemplar of justice">
+          <div class="overlay2"> <a href="https://starcitygames.com/search/?card_name=Aurelia%25c%25%20Exemplar%20of%20Justice" target="_blank">Buy on SCG</a></div></div>
+        <div class="size"><img src="bruna light of alabaster.jpg" alt="bruna light of alabaster"></div>
+        <div class="size"><img src="edgar markov.jpg" alt="edgar markov"></div>
+        <div class="size"><img src="gisela blade of goldnight.jpg" alt="gisela blade of goldnight"></div>
+        <div class="size"><img src="gishath suns avatar.jpg" alt="gishath suns avatar"></div>
+        <div class="size"><img src="inalla archmage ritualist.jpg" alt="inalla archmage ritualist"></div>
+        <div class="size"><img src="jhoira weatherlight captain.jpg" alt="jhoira weatherlight captain"></div>
+        <div class="size"><img src="jori en ruin diver.jpg" alt="jori en ruin diver"></div>
+        <div class="size"><img src="kaalia of the vast.jpg" alt="kaalia of the vast"></div>
+        <div class="size"><img src="kalemne disciple of iroas.jpg" alt="kalemne disciple of iroas"></div> 
+        <div class="size"><img src="mizzix of the izmagnus.jpg" alt="mizzix of the izmagnus"></div>
+        <div class="size"><img src="najeela the blade blossom.jpg" alt="najeela the blade blossom"></div>
+        <div class="size"><img src="niv mizzet parun.png" alt="niv mizzet parun"></div>
+        <div class="size"><img src="niv mizzet reborn.jpg" alt="niv mizzet reborn"></div>
+        <div class="size"><img src="rakdos lord of riots.jpg" alt="rakdos lord of riots"></div>
+        <div class="size"><img src="razaketh the foulblooded.jpg" alt="razaketh the foulblooded"></div>
+        <div class="size"><img src="samut voice of dissent.jpg" alt="samut voice of dissent"></div>
+        <div class="size"><img src="stonebrow krosan hero.jpg" alt="stonebrow krosan hero"></div>
+        <div class="size"><img src="the ur dragon.jpg" alt="the ur dragon"></div>
+        <div class="size"><img src="torgaar famine incarnate.jpg" alt="torgaar famine incarnate"></div>
+        <div class="size"><img src="vaevictis asmadi the dire.jpg" alt="vaevictis asmadi the dire"></div>
+        <div class="size"><img src="zacama primal calamity.jpg" alt="zacama primal calamity"></div>
+
+        
+    </div>
+  </div>
+</div>
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myDiv div img").filter(function() {
+      $(this).toggle($(this).attr('alt').toLowerCase().indexOf(value) > -1)
+    });
+
+    console.log($("#myDiv div img").attr('alt'));
+  });
+});
+</script>
+
+</body>
+</html>
